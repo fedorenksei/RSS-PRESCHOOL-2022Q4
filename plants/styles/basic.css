@@ -1,7 +1,11 @@
 html {
     --bg-color: #EDF2EC;
     --dark-text-color: #010201;
-    --orange-text-color: #E06733;
+    --grey-text-color: #636060;
+    --green-text-color: #499A18;
+    --orange-color: #E06733;
+
+    --content-width: calc((100vw - 1222px) / 2);
 }
 
 @font-face {
@@ -14,7 +18,15 @@ html {
     src: url("/plants/assets/fonts/Inika/Inika-Bold.ttf");
     font-weight: 700;
 }
-
+@font-face {
+    font-family: 'Inter';
+    src: url("/plants/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("/plants/assets/fonts/Inter/static/Inter-Bold.ttf");
+    font-weight: 700;
+}
 
 * {
     box-sizing: border-box;
@@ -36,7 +48,18 @@ body {
     flex-grow: 1;
 }
 
-/* HEADER LAYOUT */
+main > *,
+header,
+footer {
+    padding: 0 var(--content-width) 0 var(--content-width);
+}
+
+.text {
+    font: 20px Inter, sans-serif;
+    color: var(--grey-text-color);
+}
+
+/* HEADER */
 
 .header {
     height: 134px;
@@ -45,13 +68,7 @@ body {
     align-items: center;
 
     /* for width >=1440 */
-    justify-content: center;
-    /*TODO: поправить gap с учетом шрифта*/
-    column-gap: 688px;
-
-    /* for width <1440 (?) */
-    /* padding-left: 111px;
-    padding-right: 109px; */
+    justify-content: space-between;
 
     background-color: var(--bg-color);
     font: 16px 'Inika', serif;
@@ -75,5 +92,56 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--orange-text-color);
+    color: var(--orange-color);
+}
+
+/* WELCOME */
+
+.welcome.section {
+    height: 532px;
+
+    display: flex;
+    /* for width >=1440 */
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-color);
+}
+
+.leafs {
+    background-image: url("/plants/assets/img/leafs.png");
+    min-width: 448.8px;
+    height: 407.36px;
+}
+
+.welcome .content {
+    order: 1;
+    max-width: 549px;
+}
+
+.main-header {
+    margin-bottom: 42px;
+    font: 700 45px/50px Inter;
+    color: #717171;
+}
+
+.green-text {
+    color: var(--green-text-color);
+}
+
+.welcome .text {
+    line-height: 35px;
+    margin-bottom: 48px;
+}
+
+.welcome .button {
+    width: 158px;
+    height: 44px;
+
+    border: 2px solid var(--orange-color);
+    border-radius: 10px;
+    
+    background: none;
+
+    font: 16px Inter, sans-serif;
 }
