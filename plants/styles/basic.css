@@ -9,6 +9,7 @@ html {
     --content-width: calc((100vw - 1222px) / 2);
 }
 
+
 /* TEXT */
 
 @font-face {
@@ -48,6 +49,7 @@ html {
     color: var(--orange-color);
 }
 
+
 /* PAGE LAYOUT */
 
 * {
@@ -73,6 +75,7 @@ header,
 footer {
     padding: 0 var(--content-width) 0 var(--content-width);
 }
+
 
 /* HEADER */
 
@@ -115,6 +118,7 @@ footer {
 .nav-link:hover {
     color: var(--orange-color);
 }
+
 
 /* WELCOME */
 
@@ -199,4 +203,45 @@ footer {
     background-image: url(/plants/assets/img/houseplant.png);
     min-width: 464px;
     min-height: 479px;
+}
+
+
+/* SERVICE */
+
+.section.service {
+    padding-top: 40px;
+    background-color: #EDF2EC;
+}
+
+.service .header-wrapper {
+    height: 94px;
+    margin-bottom: 90px;
+    display: flex;
+    column-gap: 142px;
+}
+
+.service .section-header {
+    width: 306px;
+}
+
+.service .buttons {
+    display: flex;
+    column-gap: 38px;
+}
+
+.service .button {
+    width: 163px;
+    height: 52px;
+    border: 1px solid var(--orange-color);
+    border-radius: 10px;
+    
+    background: none;
+
+    font: 20px Inika, serif;
+    color: var(--orange-color);
+}
+
+.service .button:hover {
+    background: var(--orange-color);
+    color: var(--white-color);
 }
