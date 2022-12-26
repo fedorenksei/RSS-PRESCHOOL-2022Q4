@@ -82,9 +82,15 @@ footer {
     list-style-type: none;
 }
 
-.logo {
+.logo-block {
     display: flex;
     align-items: baseline;
+}
+
+.logo {
+    background-image: url(/plants/assets/svg/logo.svg);
+    min-width: 22px;
+    min-height: 22px;
 }
 
 .nav-link {
