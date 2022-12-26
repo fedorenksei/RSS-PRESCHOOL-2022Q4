@@ -11,19 +11,6 @@ html {
 
 /* TEXT */
 
-.text {
-    font: 20px Inter, sans-serif;
-    color: var(--grey-text-color);
-}
-
-.green-text {
-    color: var(--green-text-color);
-}
-
-.green-text {
-    color: var(--green-text-color);
-}
-
 @font-face {
     font-family: 'Inika';
     src: url("/plants/assets/fonts/Inika/Inika-Regular.ttf");
@@ -42,6 +29,23 @@ html {
     font-family: 'Inter';
     src: url("/plants/assets/fonts/Inter/static/Inter-Bold.ttf");
     font-weight: 700;
+}
+
+.text {
+    font: 20px Inter, sans-serif;
+    color: var(--grey-text-color);
+}
+
+.section-header {
+    font: 400 40px/52px Inika, serif;
+}
+
+.green-text {
+    color: var(--green-text-color);
+}
+
+.orange-text {
+    color: var(--orange-color);
 }
 
 /* PAGE LAYOUT */
@@ -73,7 +77,7 @@ footer {
 /* HEADER */
 
 .header {
-    height: 134px;
+    min-height: 134px;
     
     display: flex;
     align-items: center;
@@ -114,7 +118,7 @@ footer {
 
 /* WELCOME */
 
-.welcome.section {
+.section.welcome {
     height: 532px;
 
     display: flex;
@@ -162,4 +166,37 @@ footer {
 .welcome .button:hover {
     background: var(--orange-color);
     color: var(--white-color);
+}
+
+
+/* ABOUT US */
+
+.section.about-us {
+    min-height: 666px;
+
+    display: flex;
+    /* for width >=1440 */
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--white-color);
+}
+
+.about-us .content {
+    max-width: 605px;
+}
+
+.about-us .section-header {
+    width: 463px;
+    margin-bottom: 40px;
+}
+
+.about-us .text {
+    line-height: 30px;
+}
+
+.house-plant {
+    background-image: url(/plants/assets/img/houseplant.png);
+    min-width: 464px;
+    min-height: 479px;
 }
