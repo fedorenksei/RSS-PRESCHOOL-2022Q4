@@ -4,6 +4,7 @@ html {
     --grey-text-color: #636060;
     --green-text-color: #499A18;
     --orange-color: #E06733;
+    --white-color: #FFFFFF;
 
     --content-width: calc((100vw - 1222px) / 2);
 }
@@ -144,4 +145,9 @@ footer {
     background: none;
 
     font: 16px Inter, sans-serif;
+}
+
+.welcome .button:hover {
+    background: var(--orange-color);
+    color: var(--white-color);
 }
