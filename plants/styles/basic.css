@@ -1,6 +1,26 @@
+html {
+    --bg-color: #EDF2EC;
+    --dark-text-color: #010201;
+    --orange-text-color: #E06733;
+}
+
+@font-face {
+    font-family: 'Inika';
+    src: url("/plants/assets/fonts/Inika/Inika-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inika';
+    src: url("/plants/assets/fonts/Inika/Inika-Bold.ttf");
+    font-weight: 700;
+}
+
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 /* PAGE LAYOUT */
@@ -8,11 +28,52 @@
 body {
     height: 100vh;
     width: 100vw;
-    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
 .main {
     flex-grow: 1;
+}
+
+/* HEADER LAYOUT */
+
+.header {
+    height: 134px;
+    
+    display: flex;
+    align-items: center;
+
+    /* for width >=1440 */
+    justify-content: center;
+    /*TODO: поправить gap с учетом шрифта*/
+    column-gap: 688px;
+
+    /* for width <1440 (?) */
+    /* padding-left: 111px;
+    padding-right: 109px; */
+
+    background-color: var(--bg-color);
+    font: 16px 'Inika', serif;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 46px;
+
+    list-style-type: none;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+}
+
+.nav-link {
+    color: var(--dark-text-color);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--orange-text-color);
 }
