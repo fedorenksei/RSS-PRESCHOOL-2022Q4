@@ -5,6 +5,7 @@ html {
     --green-text-color: #499A18;
     --orange-color: #E06733;
     --white-color: #FFFFFF;
+    --projects-border: #E3E1D5;
 
     --content-width: calc((100vw - 1222px) / 2);
 }
@@ -210,6 +211,7 @@ footer {
 
 .section.service {
     padding-top: 40px;
+    padding-bottom: 121px;
     background-color: #EDF2EC;
 }
 
@@ -244,4 +246,44 @@ footer {
 .service .button:hover {
     background: var(--orange-color);
     color: var(--white-color);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 55px;
+}
+
+.project {
+    width: 330px;
+    height: 450px;
+}
+
+.project img {
+    border-radius: 20px 20px 0px 0px;
+    padding-left: 1px;
+    object-position: -0.7px 0;
+    display: block;
+}
+
+.project-caption {
+    border: 1px solid var(--projects-border);
+    border-radius: 0px 0px 20px 20px;
+    height: 100px;
+}
+
+.project-name {
+    font: bold 20px/20px Inter, sans-serif;
+    margin: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.project-name,
+.project-description {
+    text-align: center;
 }
