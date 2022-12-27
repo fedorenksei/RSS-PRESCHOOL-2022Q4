@@ -2,6 +2,7 @@ html {
     --bg-color: #EDF2EC;
     --dark-text-color: #010201;
     --grey-text-color: #636060;
+    --lightgrey-text-color: #717171;
     --green-text-color: #499A18;
     --orange-color: #E06733;
     --white-color: #FFFFFF;
@@ -151,7 +152,7 @@ footer {
 .main-header {
     margin-bottom: 42px;
     font: 700 45px/50px Inter;
-    color: #717171;
+    color: var(--lightgrey-text-color);
 }
 
 .welcome .text {
@@ -295,6 +296,7 @@ footer {
 .project-description {
     font-size: 16px;
     line-height: 20px;
+    color: var(--lightgrey-text-color);
 }
 
 .project-name,
@@ -373,6 +375,46 @@ footer {
     background: #D9D9D9;
 }
 
-.accordion-button .arrow {
-    
+
+/* CONTACTS */
+
+.section.contacts {
+    min-height: 550px;
+    padding-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 37px;
+
+    background: 
+        var(--bg-color) 
+        no-repeat 
+            left var(--content-width) 
+            bottom 0 
+        url(/plants/assets/img/contact_woman.png);
+}
+
+.contacts .section-header {
+    align-self: center;
+    font-weight: bold;
+}
+
+.city-select {
+    height: 50px;
+    width: 450px;
+    align-self: flex-end;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 35px;
+
+    background: #D6E7D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.city-option {
+    font: 20px Inter, sans-serif;
+    color: var(--lightgrey-text-color)
 }
