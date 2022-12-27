@@ -175,10 +175,12 @@ footer {
 .welcome .button:hover{
     background: var(--orange-color);
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .welcome .button:active {
     background: var(--green-text-color);
+    cursor: pointer;
 }
 
 /* ABOUT US */
@@ -256,11 +258,13 @@ footer {
 .prices .button:hover {
     background: var(--orange-color);
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .service .button:active,
 .prices .button:active {
     background: var(--green-text-color);
+    cursor: pointer;
 }
 
 .projects {
@@ -417,4 +421,34 @@ footer {
 .city-option {
     font: 20px Inter, sans-serif;
     color: var(--lightgrey-text-color)
+}
+
+
+/* FOOTER */
+
+.footer {
+    min-height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 20px Inter, sans-serif;
+}
+
+.author-data {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.footer-text-link {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-text-link:hover {
+    color: var(--orange-color);
+}
+
+.footer-text-link:active {
+    color: var(--grey-text-color);
 }
