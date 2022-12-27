@@ -114,6 +114,7 @@ footer {
 .nav-link {
     color: var(--dark-text-color);
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 .nav-link:hover {
@@ -170,6 +171,8 @@ footer {
     background: none;
 
     font: 16px Inter, sans-serif;
+
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .welcome .button:hover{
@@ -252,6 +255,8 @@ footer {
 
     font: 20px Inika, serif;
     color: var(--orange-color);
+
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .service .button:hover,
@@ -443,6 +448,7 @@ footer {
 .footer-text-link {
     color: black;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
 .footer-text-link:hover {
@@ -451,4 +457,14 @@ footer {
 
 .footer-text-link:active {
     color: var(--grey-text-color);
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    list-style-type: none;
+}
+
+.footer-img-link {
 }
