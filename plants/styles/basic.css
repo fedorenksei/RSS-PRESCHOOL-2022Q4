@@ -120,6 +120,10 @@ footer {
     color: var(--orange-color);
 }
 
+.nav-link:active {
+    color: var(--grey-text-color);
+}
+
 
 /* WELCOME */
 
@@ -168,11 +172,14 @@ footer {
     font: 16px Inter, sans-serif;
 }
 
-.welcome .button:hover {
+.welcome .button:hover{
     background: var(--orange-color);
     color: var(--white-color);
 }
 
+.welcome .button:active {
+    background: var(--green-text-color);
+}
 
 /* ABOUT US */
 
@@ -248,6 +255,10 @@ footer {
     color: var(--white-color);
 }
 
+.service .button:active {
+    background: var(--green-text-color);
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -286,4 +297,11 @@ footer {
 .project-name,
 .project-description {
     text-align: center;
+}
+
+
+/* PRICES */
+
+.section.prices {
+    padding-top: 38px;
 }
