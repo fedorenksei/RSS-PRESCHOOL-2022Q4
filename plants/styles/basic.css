@@ -333,7 +333,7 @@ footer {
 
 .section.prices {
     padding-top: 38px;
-    min-height: 560px;
+    min-height: 558px;
 
     display: flex;
     justify-content: space-between;
@@ -348,17 +348,23 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 38.5px;
 }
 
 .prices .contacts-promo .section-header {
+    margin-bottom: 41px;
     text-align: end;
+}
+
+.prices .button {
+    width: 162px; /* на 1 больше, чем базовое значение класса */
+    margin-bottom: 35px;
 }
 
 .prices .leafs {
     background: no-repeat url("/plants/assets/img/leafs_prices.png");
     width: 152px;
     height: 174.99px;
+    margin-right: 5px;
 }
 
 .prices .content .section-header {
@@ -379,7 +385,9 @@ footer {
 }
 
 .prices .accordion .price-variant {
-    padding: 16px 40px;
+    padding: 0 40px;
+    width: 250px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
