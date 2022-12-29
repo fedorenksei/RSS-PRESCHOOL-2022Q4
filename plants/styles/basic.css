@@ -133,17 +133,13 @@ footer {
     color: var(--green-text-color);
 }
 
-/* костыль для ссылки на "About us" (см. html) */
-.about-item {
-    position: relative;
-}
-.about-normal {
-    position: absolute;   
-}
-.about-bold {
-    visibility: hidden;
-    padding-right: 1px;
-    z-index: -1;
+/* Это костыль для того, 
+    чтобы при наведении курсора на "About us"
+    не дергался "Home" (это происходило, потому что
+    ширина "About us" при font-weight: bold; немного 
+    меньше, чем без него). */
+.nav-item.about-link {
+    min-width: 66.51px
 }
 
 
