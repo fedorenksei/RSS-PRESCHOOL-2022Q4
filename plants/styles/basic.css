@@ -95,18 +95,16 @@ footer {
 
 .logo-block {
     display: flex;
-    align-items: stretch;
+    align-items: center;
 }
 
 .logo {
     background-image: url(/plants/assets/svg/logo.svg);
     min-width: 22px;
     min-height: 22px;
-    margin-bottom: 10px;
-}
 
-.firm-name {
-    align-self: center;
+    margin-bottom: 10px;
+    margin-left: 1px;
 }
 
 .nav-list {
@@ -138,7 +136,7 @@ footer {
 /* WELCOME */
 
 .section.welcome {
-    height: 532px;
+    min-height: 532px;
 
     display: flex;
     /* for width >=1440 */
@@ -152,6 +150,8 @@ footer {
     background-image: url("/plants/assets/img/leafs_welcome.png");
     min-width: 448.8px;
     height: 407.36px;
+    margin-bottom: 17px;
+    margin-left: -9px;
 }
 
 .welcome .content {
@@ -160,7 +160,8 @@ footer {
 }
 
 .main-header {
-    margin-bottom: 42px;
+    margin-top: 5px;
+    margin-bottom: 41px;
     font: 700 45px/50px Inter;
     color: var(--lightgrey-text-color);
 }
