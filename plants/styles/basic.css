@@ -16,21 +16,21 @@ html {
 
 @font-face {
     font-family: 'Inika';
-    src: url("/plants/assets/fonts/Inika/Inika-Regular.ttf");
+    src: url("./plants/assets/fonts/Inika/Inika-Regular.ttf");
     font-weight: 400;
 }
 @font-face {
     font-family: 'Inika';
-    src: url("/plants/assets/fonts/Inika/Inika-Bold.ttf");
+    src: url("./plants/assets/fonts/Inika/Inika-Bold.ttf");
     font-weight: 700;
 }
 @font-face {
     font-family: 'Inter';
-    src: url("/plants/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+    src: url("./plants/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
 }
 @font-face {
     font-family: 'Inter';
-    src: url("/plants/assets/fonts/Inter/static/Inter-Bold.ttf");
+    src: url("./plants/assets/fonts/Inter/static/Inter-Bold.ttf");
     font-weight: 700;
 }
 
@@ -99,7 +99,7 @@ footer {
 }
 
 .logo {
-    background-image: url(/plants/assets/svg/logo.svg);
+    background-image: url(./plants/assets/svg/logo.svg);
     min-width: 22px;
     min-height: 22px;
 
@@ -157,7 +157,7 @@ footer {
 }
 
 .welcome .leafs {
-    background-image: url("/plants/assets/img/leafs_welcome.png");
+    background-image: url("./plants/assets/img/leafs_welcome.png");
     min-width: 448.8px;
     height: 407.36px;
     margin-bottom: 17px;
@@ -235,7 +235,7 @@ footer {
 }
 
 .about .house-plant {
-    background-image: url(/plants/assets/img/houseplant.png);
+    background-image: url(./plants/assets/img/houseplant.png);
     min-width: 464px;
     min-height: 479px;
 }
@@ -370,7 +370,7 @@ footer {
 }
 
 .prices .leafs {
-    background: no-repeat url("/plants/assets/img/leafs_prices.png");
+    background: no-repeat url("./plants/assets/img/leafs_prices.png");
     width: 152px;
     height: 174.99px;
     margin-right: 5px;
@@ -432,7 +432,7 @@ footer {
         no-repeat 
             left var(--general-padding) 
             bottom 0 
-        url(/plants/assets/img/contact_woman.png);
+        url(./plants/assets/img/contact_woman.png);
 }
 
 .contacts .section-header {
