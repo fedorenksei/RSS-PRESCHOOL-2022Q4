@@ -8,7 +8,7 @@ html {
     --white-color: #FFFFFF;
     --projects-border: #E3E1D5;
 
-    --content-width: calc((100vw - 1222px) / 2);
+    --general-padding: calc((100vw - 1222px) / 2);
 }
 
 
@@ -74,7 +74,7 @@ body {
 main > *,
 header,
 footer {
-    padding: 0 var(--content-width) 0 var(--content-width);
+    padding: 0 var(--general-padding) 0 var(--general-padding);
 }
 
 
@@ -93,6 +93,22 @@ footer {
     font: 16px 'Inika', serif;
 }
 
+.logo-block {
+    display: flex;
+    align-items: stretch;
+}
+
+.logo {
+    background-image: url(/plants/assets/svg/logo.svg);
+    min-width: 22px;
+    min-height: 22px;
+    margin-bottom: 10px;
+}
+
+.firm-name {
+    align-self: center;
+}
+
 .nav-list {
     display: flex;
     column-gap: 46px;
@@ -100,25 +116,17 @@ footer {
     list-style-type: none;
 }
 
-.logo-block {
-    display: flex;
-    align-items: baseline;
-}
-
-.logo {
-    background-image: url(/plants/assets/svg/logo.svg);
-    min-width: 22px;
-    min-height: 22px;
-}
-
 .nav-link {
+    /* погрешность в Фигме */
+    padding-right: 1px;
     color: var(--dark-text-color);
     text-decoration: none;
-    transition: color 0.4s;
+    transition: all 0.4s;
 }
 
 .nav-link:hover {
     color: var(--orange-color);
+    font-weight: bold;
 }
 
 .nav-link:active {
@@ -401,7 +409,7 @@ footer {
     background: 
         var(--bg-color) 
         no-repeat 
-            left var(--content-width) 
+            left var(--general-padding) 
             bottom 0 
         url(/plants/assets/img/contact_woman.png);
 }
