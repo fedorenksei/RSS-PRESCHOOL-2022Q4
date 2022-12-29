@@ -133,18 +133,15 @@ footer {
     color: var(--green-text-color);
 }
 
+/* костыль для ссылки на "About us" (см. html) */
 .about-us-item {
     position: relative;
 }
-
-.about-us-item .nav-link {
-    position: absolute;
-    
+.about-us-normal {
+    position: absolute;   
 }
-
 .about-us-bold {
     visibility: hidden;
-    font-weight: bold;
     padding-right: 1px;
     z-index: -1;
 }
