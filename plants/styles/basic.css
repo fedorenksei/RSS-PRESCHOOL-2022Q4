@@ -133,6 +133,22 @@ footer {
     color: var(--green-text-color);
 }
 
+.about-us-item {
+    position: relative;
+}
+
+.about-us-item .nav-link {
+    position: absolute;
+    
+}
+
+.about-us-bold {
+    visibility: hidden;
+    font-weight: bold;
+    padding-right: 1px;
+    z-index: -1;
+}
+
 
 /* WELCOME */
 

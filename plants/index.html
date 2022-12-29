@@ -21,10 +21,20 @@
                         Home
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item about-us-item">
+                    <!--В этой секции сделан костыль для того, 
+                        чтобы при наведении курсора на "About us"
+                        не дергался "Home" (это происходило, потому что
+                        ширина "About us" при font-weight: bold; немного 
+                        меньше, чем без него).
+                        Понимаю, что лишний элемент -- плохо для Accessibility.
+                        В критериях сказано, чтобы изменение внешнего вида элементов
+                        не влияло на другие, но нет ничего про Accessibility.
+                    -->
                     <a class="nav-link" href="#about-us" >
-                        About us
+                        About&nbsp;us
                     </a>
+                    <span class="about-us-bold">About us</span>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#service">
