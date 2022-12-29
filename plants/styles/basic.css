@@ -509,7 +509,7 @@ footer {
 }
 
 .svg-icon-link {
-    transition: all 1s;
+    transition: all 0.4s;
 }
 
 /* с hue-rotate(341deg) цвет менялся странным образом */
