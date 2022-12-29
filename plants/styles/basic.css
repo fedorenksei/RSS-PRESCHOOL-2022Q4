@@ -110,6 +110,7 @@ footer {
 .nav-list {
     display: flex;
     column-gap: 46px;
+    margin-top: 1px;
 
     list-style-type: none;
 }
@@ -215,15 +216,16 @@ footer {
 }
 
 .about-us .section-header {
-    width: 463px;
-    margin-bottom: 40px;
+    line-height: 52.15px;
+    margin-top: 10px;    
+    margin-bottom: 38px;
 }
 
 .about-us .text {
     line-height: 30px;
 }
 
-.house-plant {
+.about-us .house-plant {
     background-image: url(/plants/assets/img/houseplant.png);
     min-width: 464px;
     min-height: 479px;
