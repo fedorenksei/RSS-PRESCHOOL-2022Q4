@@ -511,5 +511,15 @@ footer {
     list-style-type: none;
 }
 
-.footer-img-link {
+.svg-icon-link {
+    transition: all 0.4s;
+}
+
+.svg-icon-link:hover {
+    filter: invert(53%) sepia(59%) saturate(2852%) hue-rotate(341deg) brightness(93%) contrast(88%);
+}
+
+.svg-icon-link:active {
+    transition: none;
+    filter: invert(38%) sepia(81%) saturate(2050%) hue-rotate(68deg) brightness(102%) contrast(81%);
 }
