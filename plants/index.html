@@ -21,20 +21,20 @@
                         Home
                     </a>
                 </li>
-                <li class="nav-item about-us-item">
+                <li class="nav-item about-item">
                     <!--В этой секции сделан костыль для того, 
                         чтобы при наведении курсора на "About us"
                         не дергался "Home" (это происходило, потому что
                         ширина "About us" при font-weight: bold; немного 
                         меньше, чем без него).
-                        Понимаю, что лишний элемент -- плохо для Accessibility.
+                        Понимаю, что лишний элемент - плохо для Accessibility.
                         В критериях сказано, чтобы изменение внешнего вида элементов
                         не влияло на другие, но нет ничего про Accessibility.
                     -->
-                    <a class="nav-link about-us-normal" href="#about-us" >
+                    <a class="nav-link about-normal" href="#about" >
                         About us
                     </a>
-                    <p class="nav-link about-us-bold">About us</p>
+                    <p class="nav-link about-bold">About us</p>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#service">
@@ -71,7 +71,7 @@
             </div>
             <div class="leafs"></div>
         </section>
-        <section class="section about-us" id="about-us">
+        <section class="section about" id="about">
             <div class="content">
                 <h2 class="section-header green-text">
                     We are 
@@ -170,24 +170,24 @@
             <div class="content">
                 <h2 class="section-header">Prices</h2>
                 <div class="accordion">
-                    <article class="price-variant">
+                    <div class="price-variant">
                         <p>Basics</p>
                         <div class="accordion-button">
-                            <img class="arrow" src="/plants/assets/svg/arrow.svg" alt=""></img>
+                            <img class="arrow" src="/plants/assets/svg/arrow.svg" alt="">
                         </div>
-                    </article>
-                    <article class="price-variant">
+                    </div>
+                    <div class="price-variant">
                         <p>Standard</p>
                         <div class="accordion-button">
-                            <img class="arrow" src="/plants/assets/svg/arrow.svg" alt=""></img>
+                            <img class="arrow" src="/plants/assets/svg/arrow.svg" alt="">
                         </div>
-                    </article>
-                    <article class="price-variant">
+                    </div>
+                    <div class="price-variant">
                         <p>Pro care</p>
                         <div class="accordion-button">
-                            <img class="arrow" src="/plants/assets/svg/arrow.svg" alt=""></img>
+                            <img class="arrow" src="/plants/assets/svg/arrow.svg" alt="">
                         </div>
-                    </article>
+                    </div>
                 </div>
             </div>
             <div class="contacts-promo">
@@ -209,7 +209,7 @@
             <div class="city-select">
                 <p class="city-option">City</p>
                 <div class="accordion-button">
-                    <img class="arrow" src="/plants/assets/svg/arrow.svg" alt=""></img>
+                    <img class="arrow" src="/plants/assets/svg/arrow.svg" alt="">
                 </div>
             </div>
         </section>

@@ -134,13 +134,13 @@ footer {
 }
 
 /* костыль для ссылки на "About us" (см. html) */
-.about-us-item {
+.about-item {
     position: relative;
 }
-.about-us-normal {
+.about-normal {
     position: absolute;   
 }
-.about-us-bold {
+.about-bold {
     visibility: hidden;
     padding-right: 1px;
     z-index: -1;
@@ -213,7 +213,7 @@ footer {
 
 /* ABOUT US */
 
-.section.about-us {
+.section.about {
     min-height: 666px;
 
     display: flex;
@@ -224,21 +224,21 @@ footer {
     background-color: var(--white-color);
 }
 
-.about-us .content {
+.about .content {
     max-width: 605px;
 }
 
-.about-us .section-header {
+.about .section-header {
     line-height: 52.15px;
     margin-top: 10px;    
     margin-bottom: 38px;
 }
 
-.about-us .text {
+.about .text {
     line-height: 30px;
 }
 
-.about-us .house-plant {
+.about .house-plant {
     background-image: url(/plants/assets/img/houseplant.png);
     min-width: 464px;
     min-height: 479px;
