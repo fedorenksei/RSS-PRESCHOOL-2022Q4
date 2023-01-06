@@ -11,6 +11,28 @@ html {
     --general-padding: calc((100vw - 1222px) / 2);
 }
 
+html {
+    --general-padding: calc((100vw - 330px) / 2);
+}
+
+@media (min-width: 767px) {
+    html {
+        --general-padding: calc((100vw - 668px) / 2);
+    }
+}
+
+@media (min-width: 1023px) {
+    html {
+        --general-padding: calc((100vw - 900px) / 2);
+    }
+}
+
+@media (min-width: 1439px) {
+    html {
+        --general-padding: calc((100vw - 1222px) / 2);
+    }
+}
+
 
 /* TEXT */
 
@@ -255,6 +277,7 @@ footer {
     display: flex;
     align-items: center;
     column-gap: 158.5px;
+    flex-wrap: wrap;
 }
 
 .service .section-header {
@@ -310,8 +333,8 @@ footer {
 
 .project img {
     border-radius: 20px 20px 0px 0px;
-    padding-left: 1px;
-    object-position: -0.7px 0;
+    /* padding-left: 1px;
+    object-position: -0.7px 0; */
     display: block;
 }
 
