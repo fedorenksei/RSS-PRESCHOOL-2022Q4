@@ -16,7 +16,7 @@
 }
 
 .contacts .section-header {
-    font: 400 40px/52px Inika, serif;
+    font: 40px/52px Inika, serif;
     font-weight: bold;
 }
 
@@ -53,5 +53,27 @@
 
     .city-select {
         align-self: auto;
+    }
+}
+
+/* mobile (380px) */
+@media (max-width: 380px) {
+    .section.contacts {
+        min-height: 445px;
+        padding-top: 25px;
+        row-gap: 81px;
+
+        background-position-x: center;
+        background-size: 100px;
+    }
+
+    .contacts .section-header {
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+    .city-select {
+        width: 300px;
+        padding-right: 22px;
     }
 }

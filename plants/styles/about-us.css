@@ -56,3 +56,28 @@
         width: 250px;
     }
 }
+
+/* mobile (>=380) */
+@media (max-width: 767px) {
+    .section.about {
+        min-height: 516px;
+    }
+
+    .about .section-header {
+        font-size: 25px;
+        line-height: 32.57px;
+
+        margin-top: 30px;
+        margin-bottom: 14px;
+    }
+
+    .about .text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .about .house-plant {
+        margin-top: 0;
+        width: 150px;
+    }
+}

@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     column-gap: 158.5px;
-    row-gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -20,7 +19,9 @@
 
 .service .buttons {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 38px;
+    row-gap: 9px;
     margin-top: 4px;
 }
 
@@ -104,7 +105,10 @@
     }
 
     .service .section-header {
-        font: 35px/45.61px Inika, serif;
+        margin-bottom: 40px;
+
+        font-size: 35px;
+        line-height: 45.61px;
     }
 
     .projects {
@@ -113,5 +117,43 @@
 
     .project-description {
         padding: 0px 35px;
+    }
+}
+
+/* mobile (>=380) */
+@media (max-width: 767px) {
+    .section.service {
+        padding-top: 30px;
+        padding-bottom: 27px;
+    }
+
+    .service .header-wrapper {
+        margin-bottom: 40px;
+    }
+    
+    .service .section-header {
+        margin-bottom: 35px;
+
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+
+    .service .buttons {
+        column-gap: 10px;
+    }
+
+    .service .button,
+    .prices .button {
+        width: 121px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 34px;
     }
 }

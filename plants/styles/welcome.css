@@ -126,6 +126,7 @@
 /* mobile (>=380) */
 @media (max-width: 767px) {
     .section.welcome {
+        padding-top: 26px;
         min-height: 300px;
     }
 
@@ -134,11 +135,21 @@
     }
 
     .main-header {
+        margin-bottom: 21px;
+
         font-size: 25px;
         line-height: 35px;
     }
 
     .welcome .text {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+        margin-left: 0px;
+    }
+
+    .welcome .button {
+        width: 100px;
+        height: 34.14px;
+
+        font-size: 10px;
     }
 }

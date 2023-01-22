@@ -88,3 +88,18 @@
         margin-bottom: 20px;
     }
 }
+
+/* mobile (>=380) */
+@media (max-width: 767px) {
+    .footer {
+        min-height: 146px;
+    }
+
+    .author-data {
+        margin-top: 22px;
+    }
+
+    .footer .rss-link {
+        margin-bottom: 7px;
+    }
+}

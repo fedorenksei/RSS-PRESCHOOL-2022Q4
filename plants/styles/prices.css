@@ -4,6 +4,8 @@
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    row-gap: 19px;
 }
 
 .prices .section-header {
@@ -56,7 +58,6 @@
 
 .prices .accordion .price-variant {
     padding: 0 40px;
-    width: 250px;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -102,5 +103,69 @@
 
     .prices .button {
         margin-bottom: 29px;
+    }
+}
+
+/* mobile (380px) */
+@media (max-width: 380px) {
+    .section.prices {
+        padding-top: 25px;
+        flex-direction: column;
+        align-items: center;
+        min-height: unset;
+    }
+
+    .prices .content .section-header {
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 36px;
+        
+        text-align: center;
+        font-size: 25px;
+        line-height: 30.26px;
+    }
+
+    .prices .leafs {
+        display: none;
+    }
+
+
+    .prices .accordion .price-variant {
+        font-size: 15px;
+    }
+
+    .prices .accordion {
+        width: 224px;
+        padding: 28px 21px;
+        row-gap: 13.92px;
+        margin-left: 2px;
+    }
+
+    .prices .accordion .price-variant {
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+
+    .accordion-button {
+        margin-top: 4px;
+    }
+
+    .prices .contacts-promo {
+        width: auto;
+        padding: 0 23px;
+        align-items: center;
+    }
+    
+    .prices .contacts-promo .section-header {
+        margin-top: 0px;
+        margin-bottom: 21px;
+
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .prices .contacts-promo .button {
+        width: 121px;
+        margin-bottom: 40px;
     }
 }

@@ -5,21 +5,6 @@
     min-height: 134px;
 }
 
-/* tablet (768px) */
-@media (max-width: 768px) {
-    .header {
-        min-height: 117px;
-    }
-}
-
-/* mobile (380px) */
-@media (max-width: 380px) {
-    .header {
-        min-height: 96px;
-    }
-}
-
-
 .header {
     display: flex;
     align-items: center;
@@ -78,4 +63,27 @@
     меньше, чем без него). */
 .nav-item.about-link {
     min-width: 66.51px
+}
+
+/* tablet (768px) */
+@media (max-width: 768px) {
+    .header {
+        min-height: 117px;
+    }
+}
+
+/* mobile (380px) */
+@media (max-width: 380px) {
+    .header {
+        min-height: 96px;
+    }
+
+    .logo-block {
+        margin-top: 5px;
+        margin-left: -3px;
+    }
+
+    .nav-list {
+        display: none;
+    }
 }
