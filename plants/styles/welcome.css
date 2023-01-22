@@ -92,7 +92,7 @@
     margin-bottom: 48px;
 }
 
-/* tablet (>=768px) */
+/* tablet (768px) */
 @media (max-width: 1439px) {
     .section.welcome {
         padding-top: 40px;
