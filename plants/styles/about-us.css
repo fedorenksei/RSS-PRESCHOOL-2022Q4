@@ -1,0 +1,83 @@
+
+/* ABOUT US */
+
+.section.about {
+    min-height: 666px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--white-color);
+}
+
+.about .content {
+    max-width: 605px;
+}
+
+.about .section-header {
+    font: 40px/52.15px Inika, serif;
+    margin-top: 10px;    
+    margin-bottom: 38px;
+}
+
+.about .text {
+    font: 20px/30px Inter, sans-serif;
+}
+
+.about .house-plant {
+    width: 464px;
+}
+
+/* tablet (>=768px) */
+@media (max-width: 1439px) {
+    .section.about {
+        min-height: 783px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .about .content {
+        max-width: unset;
+    }
+
+    .about .section-header {
+        font-size: 35px;
+        line-height: 45.61px;
+        text-align: center;
+        margin-top: 41px;
+        margin-bottom: 50px;
+    }
+
+    .about .house-plant {
+        margin-top: 68px;
+        width: 250px;
+    }
+}
+
+/* mobile (>=380) */
+@media (max-width: 767px) {
+    .section.about {
+        min-height: 516px;
+    }
+
+    .about .section-header {
+        font-size: 25px;
+        line-height: 32.57px;
+
+        margin-top: 30px;
+        margin-bottom: 14px;
+    }
+
+    .about .text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .about .house-plant {
+        margin-top: 0;
+        width: 150px;
+    }
+}

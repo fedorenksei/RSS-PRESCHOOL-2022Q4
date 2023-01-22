@@ -1,3 +1,5 @@
+/* VARIABLES AND FONT IMPORTS*/
+
 html {
     --bg-color: #EDF2EC;
     --dark-text-color: #010201;
@@ -7,12 +9,7 @@ html {
     --orange-color: #E06733;
     --white-color: #FFFFFF;
     --projects-border: #E3E1D5;
-
-    --general-padding: calc((100vw - 1222px) / 2);
 }
-
-
-/* TEXT */
 
 @font-face {
     font-family: 'Inika';
@@ -34,21 +31,35 @@ html {
     font-weight: 700;
 }
 
-.text {
-    font: 20px Inter, sans-serif;
-    color: var(--grey-text-color);
+
+/* LEFT AND RIGHT PADDINGS OF WHOLE PAGE */
+
+html {
+    --general-padding: calc((100vw - 1222px) / 2);
 }
 
-.section-header {
-    font: 400 40px/52px Inika, serif;
+/* desktop (1440px) */
+@media (max-width: 1440px) {
+    html {
+        /* --general-padding: calc((100vw - 1222px) / 2); */
+        --general-padding: 7.548476454293629vw;
+    }
 }
 
-.green-text {
-    color: var(--green-text-color);
+/* tablet (768px) */
+@media (max-width: 768px) {
+    html {
+        /* --general-padding: calc((100vw - 668px) / 2); */
+        --general-padding: 6.510416666666667vw;
+    }
 }
 
-.orange-text {
-    color: var(--orange-color);
+/* mobile (380px) */
+@media (max-width: 380px) {
+    html {
+        /* --general-padding: calc((100vw - 330px) / 2); */
+        --general-padding: 6.578947368421052vw;
+    }
 }
 
 
@@ -62,7 +73,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -78,454 +89,16 @@ footer {
 }
 
 
-/* HEADER */
+/* TEXT COLOR */
 
-.header {
-    min-height: 134px;
-    
-    display: flex;
-    align-items: center;
-
-    /* for width >=1440 */
-    justify-content: space-between;
-
-    background-color: var(--bg-color);
-    font: 16px 'Inika', serif;
+.text {
+    color: var(--grey-text-color);
 }
 
-.logo-block {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    background-image: url(../assets/svg/logo.svg);
-    min-width: 22px;
-    min-height: 22px;
-
-    margin-bottom: 10px;
-    margin-left: 1px;
-}
-
-.nav-list {
-    display: flex;
-    column-gap: 46px;
-    margin-top: 1px;
-
-    list-style-type: none;
-}
-
-.nav-link {
-    /* погрешность в Фигме */
-    padding-right: 1px;
-    color: var(--dark-text-color);
-    text-decoration: none;
-    transition: all 0.4s;
-}
-
-.nav-link:hover {
-    color: var(--orange-color);
-    font-weight: bold;
-}
-
-.nav-link:active {
-    transition: none;
+.green-text {
     color: var(--green-text-color);
 }
 
-/* Это костыль для того, 
-    чтобы при наведении курсора на "About us"
-    не дергался "Home" (это происходило, потому что
-    ширина "About us" при font-weight: bold; немного 
-    меньше, чем без него). */
-.nav-item.about-link {
-    min-width: 66.51px
-}
-
-
-/* WELCOME */
-
-.section.welcome {
-    min-height: 532px;
-
-    display: flex;
-    /* for width >=1440 */
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--bg-color);
-}
-
-.welcome .leafs {
-    background-image: url("../assets/img/leafs_welcome.png");
-    min-width: 448.8px;
-    height: 407.36px;
-    margin-bottom: 17px;
-    margin-left: -9px;
-}
-
-.welcome .content {
-    order: 1;
-    max-width: 549px;
-}
-
-.main-header {
-    margin-top: 5px;
-    margin-bottom: 41px;
-    font: 700 45px/50px Inter;
-    color: var(--lightgrey-text-color);
-}
-
-.welcome .text {
-    line-height: 35px;
-    margin-bottom: 48px;
-}
-
-.welcome .button {
-    width: 158px;
-    height: 44px;
-
-    border: 2px solid var(--orange-color);
-    border-radius: 10px;
-    
-    background: none;
-
-    font: 16px Inter, sans-serif;
-
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.welcome .button:hover{
-    background: var(--orange-color);
-    color: var(--white-color);
-    cursor: pointer;
-}
-
-.welcome .button:active {
-    transition: none;
-    background: var(--green-text-color);
-    cursor: pointer;
-}
-
-/* ABOUT US */
-
-.section.about {
-    min-height: 666px;
-
-    display: flex;
-    /* for width >=1440 */
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--white-color);
-}
-
-.about .content {
-    max-width: 605px;
-}
-
-.about .section-header {
-    line-height: 52.15px;
-    margin-top: 10px;    
-    margin-bottom: 38px;
-}
-
-.about .text {
-    line-height: 30px;
-}
-
-.about .house-plant {
-    background-image: url(../assets/img/houseplant.png);
-    min-width: 464px;
-    min-height: 479px;
-}
-
-
-/* SERVICE */
-
-.section.service {
-    padding-top: 45px;
-    padding-bottom: 121px;
-    background-color: #EDF2EC;
-}
-
-.service .header-wrapper {
-    height: 94px;
-    margin-bottom: 85px;
-    display: flex;
-    align-items: center;
-    column-gap: 158.5px;
-}
-
-.service .section-header {
-    line-height: 52.12px;
-}
-
-.service .buttons {
-    display: flex;
-    column-gap: 38px;
-    margin-top: 4px;
-}
-
-.service .button,
-.prices .button {
-    width: 161px;
-    height: 50px;
-    border: 1px solid var(--orange-color);
-    border-radius: 5px;
-    
-    background: none;
-
-    font: 20px Inika, serif;
+.orange-text {
     color: var(--orange-color);
-
-    transition: background-color 0.4s, color 0.5s;
-}
-
-.service .button:hover,
-.prices .button:hover {
-    background: var(--orange-color);
-    color: var(--white-color);
-    cursor: pointer;
-}
-
-.service .button:active,
-.prices .button:active {
-    transition: none;
-    background: var(--green-text-color);
-    cursor: pointer;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 55px;
-}
-
-.project {
-    width: 330px;
-    height: 450px;
-}
-
-.project img {
-    border-radius: 20px 20px 0px 0px;
-    padding-left: 1px;
-    object-position: -0.7px 0;
-    display: block;
-}
-
-.project-caption {
-    border: 1px solid var(--projects-border);
-    border-radius: 0px 0px 20px 20px;
-    height: 100px;
-}
-
-.project-name {
-    font: bold 20px/20px Inter, sans-serif;
-    margin: 10px;
-}
-
-.project-description {
-    font-size: 16px;
-    line-height: 20px;
-    color: var(--lightgrey-text-color);
-}
-
-.project-name,
-.project-description {
-    text-align: center;
-}
-
-
-/* PRICES */
-
-.section.prices {
-    padding-top: 38px;
-    min-height: 558px;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-.prices .section-header {
-    font: bold 40px/50px Inter, sans-serif;
-}
-
-.prices .contacts-promo {
-    width: 452px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.prices .contacts-promo .section-header {
-    margin-bottom: 41px;
-    text-align: end;
-}
-
-.prices .button {
-    width: 162px; /* на 1 больше, чем базовое значение класса */
-    margin-bottom: 35px;
-}
-
-.prices .leafs {
-    background: no-repeat url("../assets/img/leafs_prices.png");
-    width: 152px;
-    height: 174.99px;
-    margin-right: 5px;
-}
-
-.prices .content .section-header {
-    margin-bottom: 60px;
-}
-
-.prices .accordion {
-    width: 332px;
-
-    padding: 33px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    row-gap: 32px;
-
-    border: 1px solid var(--projects-border);
-    border-radius: 20px;
-}
-
-.prices .accordion .price-variant {
-    padding: 0 40px;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-radius: 20px;
-    background: var(--bg-color);
-    font: bold 20px/20px Inter, sans-serif;
-}
-
-.accordion-button {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #D9D9D9;
-}
-
-
-/* CONTACTS */
-
-.section.contacts {
-    min-height: 550px;
-    padding-top: 60px;
-
-    display: flex;
-    flex-direction: column;
-    row-gap: 37px;
-
-    background: 
-        var(--bg-color) 
-        no-repeat 
-            left var(--general-padding) 
-            bottom 0 
-        url(../assets/img/contact_woman.png);
-}
-
-.contacts .section-header {
-    align-self: center;
-    font-weight: bold;
-}
-
-.city-select {
-    height: 50px;
-    width: 450px;
-    align-self: flex-end;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 35px;
-
-    background: #D6E7D2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.city-option {
-    font: 20px Inter, sans-serif;
-    color: var(--lightgrey-text-color)
-}
-
-
-/* FOOTER */
-
-.footer {
-    min-height: 130px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font: 20px Inter, sans-serif;
-}
-
-.author-data {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 20px;
-}
-
-.footer-text-link {
-    color: black;
-    text-decoration: none;
-    transition: color 0.4s;
-}
-
-.footer-text-link:hover {
-    color: var(--orange-color);
-}
-
-.footer-text-link:active {
-    transition: none;
-    color: var(--green-text-color);
-}
-
-.footer .rss-link {
-    margin-left: 18px;
-}
-
-.social-list {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    margin-top: 5px;
-    list-style-type: none;
-}
-
-.svg-icon-link {
-    transition: all 0.4s;
-}
-
-/* с hue-rotate(341deg) цвет менялся странным образом */
-.svg-icon-link:hover {
-    filter: 
-        invert(53%) 
-        sepia(59%) 
-        saturate(2852%)
-        /* hue-rotate(341deg)  */
-        brightness(93%) 
-        contrast(88%);
-}
-
-.svg-icon-link:active {
-    transition: none;
-    filter: 
-        invert(38%) 
-        sepia(81%) 
-        saturate(2050%) 
-        hue-rotate(68deg)
-        brightness(102%)
-        contrast(81%);
 }
