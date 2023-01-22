@@ -1,23 +1,24 @@
 /* HEADER */
 
-/* mobile */
+/* desktop (1440px) */
 .header {
-    min-height: 96px;
+    min-height: 134px;
 }
 
-/* tablet (>=768px) */
-@media (min-width: 768px) {
+/* tablet (768px) */
+@media (max-width: 768px) {
     .header {
         min-height: 117px;
     }
 }
 
-/* desktop (>=1440px) */
-@media (min-width: 1440px) {
+/* mobile (380px) */
+@media (max-width: 380px) {
     .header {
-        min-height: 134px;
+        min-height: 96px;
     }
 }
+
 
 .header {
     display: flex;

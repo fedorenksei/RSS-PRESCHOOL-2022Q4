@@ -1,3 +1,5 @@
+/* VARIABLES AND FONT IMPORTS*/
+
 html {
     --bg-color: #EDF2EC;
     --dark-text-color: #010201;
@@ -8,38 +10,6 @@ html {
     --white-color: #FFFFFF;
     --projects-border: #E3E1D5;
 }
-
-
-/* LEFT AND RIGHT PADDINGS OF WHOLE PAGE */
-
-/* mobile */
-html {
-    --general-padding: calc((100vw - 330px) / 2);
-}
-
-/* tablet (>=768px) */
-@media (min-width: 768px) {
-    html {
-        --general-padding: calc((100vw - 668px) / 2);
-    }
-}
-
-/* desktop (>=1024px) */
-/* @media (min-width: 1024px) {
-    html {
-        --general-padding: calc((100vw - 900px) / 2);
-    }
-} */
-
-/* desktop (>=1440px) */
-@media (min-width: 1440px) {
-    html {
-        --general-padding: calc((100vw - 1222px) / 2);
-    }
-}
-
-
-/* TEXT */
 
 @font-face {
     font-family: 'Inika';
@@ -61,21 +31,29 @@ html {
     font-weight: 700;
 }
 
-.text {
-    font: 20px Inter, sans-serif;
-    color: var(--grey-text-color);
+
+/* LEFT AND RIGHT PADDINGS OF WHOLE PAGE */
+
+/* desktop (1440px) */
+html {
+    /* --general-padding: calc((100vw - 1222px) / 2); */
+    --general-padding: 7.548476454293629vw;
 }
 
-.section-header {
-    font: 400 40px/52px Inika, serif;
+/* tablet (768px) */
+@media (max-width: 768px) {
+    html {
+        /* --general-padding: calc((100vw - 668px) / 2); */
+        --general-padding: 6.510416666666667vw;
+    }
 }
 
-.green-text {
-    color: var(--green-text-color);
-}
-
-.orange-text {
-    color: var(--orange-color);
+/* mobile (380px) */
+@media (max-width: 380px) {
+    html {
+        /* --general-padding: calc((100vw - 330px) / 2); */
+        --general-padding: 6.578947368421052vw;
+    }
 }
 
 
@@ -89,7 +67,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -105,69 +83,26 @@ footer {
 }
 
 
-/* WELCOME */
+/* TEXT */
 
-.section.welcome {
-    min-height: 532px;
-
-    display: flex;
-    /* for width >=1440 */
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--bg-color);
+.text {
+    /* font: 20px Inter, sans-serif; */
+    color: var(--grey-text-color);
 }
 
-.welcome .leafs {
-    background-image: url("../assets/img/leafs_welcome.png");
-    min-width: 448.8px;
-    height: 407.36px;
-    margin-bottom: 17px;
-    margin-left: -9px;
+.section-header {
+    /* font: 400 40px/52px Inika, serif; */
 }
 
-.welcome .content {
-    order: 1;
-    max-width: 549px;
+.green-text {
+    color: var(--green-text-color);
 }
 
-.main-header {
-    margin-top: 5px;
-    margin-bottom: 41px;
-    font: 700 45px/50px Inter;
-    color: var(--lightgrey-text-color);
+.orange-text {
+    color: var(--orange-color);
 }
 
-.welcome .text {
-    line-height: 35px;
-    margin-bottom: 48px;
-}
 
-.welcome .button {
-    width: 158px;
-    height: 44px;
-
-    border: 2px solid var(--orange-color);
-    border-radius: 10px;
-    
-    background: none;
-
-    font: 16px Inter, sans-serif;
-
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.welcome .button:hover{
-    background: var(--orange-color);
-    color: var(--white-color);
-    cursor: pointer;
-}
-
-.welcome .button:active {
-    transition: none;
-    background: var(--green-text-color);
-    cursor: pointer;
-}
 
 /* ABOUT US */
 
