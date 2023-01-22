@@ -104,39 +104,6 @@ footer {
 
 
 
-/* ABOUT US */
-
-.section.about {
-    min-height: 666px;
-
-    display: flex;
-    /* for width >=1440 */
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--white-color);
-}
-
-.about .content {
-    max-width: 605px;
-}
-
-.about .section-header {
-    line-height: 52.15px;
-    margin-top: 10px;    
-    margin-bottom: 38px;
-}
-
-.about .text {
-    line-height: 30px;
-}
-
-.about .house-plant {
-    background-image: url(../assets/img/houseplant.png);
-    min-width: 464px;
-    min-height: 479px;
-}
-
 
 /* SERVICE */
 
