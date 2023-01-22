@@ -7,7 +7,14 @@
     <title>Plants</title>
     <link rel="shortcut icon" href="assets/svg/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/basic.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/welcome.css">
+    <link rel="stylesheet" href="styles/about-us.css">
+    <link rel="stylesheet" href="styles/service.css">
+    <link rel="stylesheet" href="styles/prices.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <header class="header">
@@ -16,6 +23,12 @@
             <p class="firm-name">Plants</p>
         </div>
         <nav class="nav">
+            <img 
+                class="cross svg-icon-link" 
+                src="/plants/assets/svg/cross.svg" 
+                alt=""
+                onclick="closeMenu()"
+            >
             <ul class="nav-list">
                 <li class="nav-item">
                     <a class="nav-link" href="#home">
@@ -44,6 +57,15 @@
                 </li>
             </ul>
         </nav>
+        <img 
+            class="burger svg-icon-link" 
+            src="/plants/assets/svg/burger.svg"
+            onclick="openMenu()"
+        >
+        <div 
+            class="darkBackground"
+            onclick="closeMenu()"
+        ></div>
     </header>
     <main class="main">
         <section class="section welcome" id="welcome">
@@ -60,7 +82,7 @@
                 </p>
                 <button class="button">LEARN MORE</button>
             </div>
-            <div class="leafs"></div>
+            <img class="leafs" src="assets/img/leafs_welcome.png" alt="">
         </section>
         <section class="section about" id="about">
             <div class="content">
@@ -75,7 +97,7 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </p>
             </div>
-            <div class="house-plant"></div>
+            <img class="house-plant" src="assets/img/houseplant.png" alt="">
         </section>
         <section class="section service" id="service">
             <div class="header-wrapper">
@@ -90,7 +112,13 @@
             </div>
             <div class="projects">
                 <figure class="project">
-                    <img src="assets/img/garden-care.jpg" alt="">
+                    <picture>
+                        <source 
+                            srcset="assets/img/projects-tablet/project1.png" 
+                            media="(max-width: 1439px)"
+                        >
+                        <img src="assets/img/projects-desktop/project1.png" alt="">
+                    </picture>
                     <figcaption class="project-caption">
                         <p class="project-name orange-text">
                             Garden care
@@ -101,7 +129,13 @@
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <img src="assets/img/planting.png" alt="">
+                    <picture>
+                        <source 
+                            srcset="assets/img/projects-tablet/project2.png" 
+                            media="(max-width: 1439px)"
+                        >
+                        <img src="assets/img/projects-desktop/project2.png" alt="">
+                    </picture>
                     <figcaption class="project-caption">
                         <p class="project-name orange-text">
                             Planting
@@ -112,7 +146,13 @@
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <img src="assets/img/lawn-care.png" alt="">
+                    <picture>
+                        <source 
+                            srcset="assets/img/projects-tablet/project3.png" 
+                            media="(max-width: 1439px)"
+                        >
+                        <img src="assets/img/projects-desktop/project3.png" alt="">
+                    </picture>
                     <figcaption class="project-caption">
                         <p class="project-name orange-text">
                             Lawn care
@@ -123,7 +163,13 @@
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <img src="assets/img/planting2.png" alt="">
+                    <picture>
+                        <source 
+                            srcset="assets/img/projects-tablet/project4.png" 
+                            media="(max-width: 1439px)"
+                        >
+                        <img src="assets/img/projects-desktop/project4.png" alt="">
+                    </picture>
                     <figcaption class="project-caption">
                         <p class="project-name orange-text">
                             Planting
@@ -134,7 +180,13 @@
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <img src="assets/img/garden-care2.png" alt="">
+                    <picture>
+                        <source 
+                            srcset="assets/img/projects-tablet/project5.png" 
+                            media="(max-width: 1439px)"
+                        >
+                        <img src="assets/img/projects-desktop/project5.png" alt="">
+                    </picture>
                     <figcaption class="project-caption">
                         <p class="project-name orange-text">
                             Garden care
@@ -145,7 +197,13 @@
                     </figcaption>
                 </figure>
                 <figure class="project">
-                    <img src="assets/img/planting3.png" alt="">
+                    <picture>
+                        <source 
+                            srcset="assets/img/projects-tablet/project6.png" 
+                            media="(max-width: 1439px)"
+                        >
+                        <img src="assets/img/projects-desktop/project6.png" alt="">
+                    </picture>
                     <figcaption class="project-caption">
                         <p class="project-name orange-text">
                             Planting
@@ -243,5 +301,6 @@
             </li>
         </ul>
     </footer>
+    <script src="scripts/burger.js"></script>
 </body>
 </html>

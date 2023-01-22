@@ -1,0 +1,153 @@
+/* HEADER */
+
+/* desktop (1440px) */
+.header {
+    min-height: 134px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    /* for width >=1440 */
+    justify-content: space-between;
+
+    background-color: var(--bg-color);
+    font: 16px 'Inika', serif;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-image: url(../assets/svg/logo.svg);
+    min-width: 22px;
+    min-height: 22px;
+
+    margin-bottom: 10px;
+    margin-left: 1px;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 46px;
+    margin-top: 1px;
+
+    list-style-type: none;
+}
+
+.nav-link {
+    /* погрешность в Фигме */
+    padding-right: 1px;
+    color: var(--dark-text-color);
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.nav-link:hover {
+    color: var(--orange-color);
+    font-weight: bold;
+}
+
+.nav-link:active {
+    transition: none;
+    color: var(--green-text-color);
+}
+
+/* Это костыль для того, 
+    чтобы при наведении курсора на "About us"
+    не дергался "Home" (это происходило, потому что
+    ширина "About us" при font-weight: bold; немного 
+    меньше, чем без него). */
+.nav-item.about-link {
+    min-width: 66.51px
+}
+
+/* tablet (768px) */
+@media (max-width: 768px) {
+    .header {
+        min-height: 117px;
+    }
+}
+
+/* mobile (380px) */
+@media (max-width: 380px) {
+    .header {
+        min-height: 96px;
+    }
+
+    .logo-block {
+        margin-top: 5px;
+        margin-left: -3px;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+
+/* BURGER NAV */
+
+.burger {
+    display: none;
+}
+
+.cross {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+}
+
+.darkBackground {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+}
+
+/* mobile (380px) */
+@media (max-width: 767px) {
+    .nav {
+        display: block;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 46px;
+        padding-top: 46px;
+        /* padding-left: 30px; */
+
+        background-color: white;
+        transition: width 0.5s;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 46px;
+        margin-left: 30px;
+    
+        list-style-type: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .cross {
+        display: block;
+    }
+}
