@@ -116,6 +116,12 @@
     transition: 0.5s; /* for opacity and visibility (which switches after transition)*/
 }
 
+.burger:hover,
+.cross:hover,
+.darkBackground:hover {
+    cursor: pointer;
+}
+
 .nav {
     width: unset;
 }
