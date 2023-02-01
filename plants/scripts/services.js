@@ -8,33 +8,37 @@ serviceButtons.forEach(buttonElem => {
 
 let pressedServiceButtons = [];
 function switchServiceButton(buttonElem) {
-    const groupOfButton = new Map();
-    groupOfButton.set(buttonGardens, document.querySelectorAll('.project-type_gardens'))
-    groupOfButton.set(buttonLawn, document.querySelectorAll('.project-type_lawn'))
-    groupOfButton.set(buttonPlanting, document.querySelectorAll('.project-type_planting'))
-    
-    if (pressedServiceButtons.indexOf(buttonElem) === -1) {
-        turnOnButton(buttonElem);
-        buttonElem.classList.add('button-services_selected');
-    } else {
-        turnOffButton(buttonElem);
-        buttonElem.classList.remove('button-services_selected');
+    switchButtonClass(buttonElem)
+    function switchButtonClass(buttonElem) {
+        const turnedOnClass = 'button-services_selected'
+        if (buttonElem.classList.contains(turnedOnClass))
+            buttonElem.classList.remove(turnedOnClass);
+        else buttonElem.classList.add(turnedOnClass);
     }
 
+    if (pressedServiceButtons.indexOf(buttonElem) === -1) {
+        turnOnButton(buttonElem);
+    } else {
+        turnOffButton(buttonElem);
+    }
     
     function turnOnButton(buttonElem) {
         pressedServiceButtons.push(buttonElem)
         
+        // button turned on solely - blur other groups
         if (pressedServiceButtons.length === 1) {
-            blurOtherGroupsThan(buttonElem)
+            switchOtherGroupsThan(buttonElem)
             return
         }
         
-        focusGroup(buttonElem);
+        // there has been some buttons turned on - focus this group
+        switchGroup(buttonElem)
+        
+        // there has been 2 of them (2 - max amount) - blur the older one
         if (pressedServiceButtons.length === 3) {
-            const excessiveButton = pressedServiceButtons.shift()
-            blurGroup(excessiveButton)
-            excessiveButton.classList.remove('button-services_selected');
+            const excessiveButton = pressedServiceButtons[0]
+            turnOffButton(excessiveButton)
+            switchButtonClass(excessiveButton)
         }
     }
     
@@ -42,42 +46,33 @@ function switchServiceButton(buttonElem) {
         const elemIndex = pressedServiceButtons.indexOf(buttonElem)
         pressedServiceButtons.splice(elemIndex, 1)
         
+        // only this butten was turned on - take out of blur others
         if (pressedServiceButtons.length === 0) {
-            focusOtherGroupsThan(buttonElem)
+            switchOtherGroupsThan(buttonElem)
             return
         }
         
-        blurGroup(buttonElem);
-        // buttonElem.classList.remove('button-services_selected');
+        // there are some other buttons turned on - blur this one
+        switchGroup(buttonElem);
     }
     
-    function blurGroup(buttonElem) {
+    function switchGroup(buttonElem) {
+        const groupOfButton = new Map();
+        groupOfButton.set(buttonGardens, document.querySelectorAll('.project-type_gardens'))
+        groupOfButton.set(buttonLawn, document.querySelectorAll('.project-type_lawn'))
+        groupOfButton.set(buttonPlanting, document.querySelectorAll('.project-type_planting'))
         const projects = groupOfButton.get(buttonElem)
+        
+        const blurClass = 'project_blurred';
         for (const project of projects) {
-            project.classList.add('project_blurred')
+            if (project.classList.contains(blurClass))
+                project.classList.remove(blurClass);
+            else project.classList.add(blurClass);
         }
     }
-    function blurOtherGroupsThan(buttonElem) {
+    function switchOtherGroupsThan(buttonElem) {
         serviceButtons.forEach(button => {
-            if (button != buttonElem) blurGroup(button)
-        })
-    }
-
-    function focusGroup(buttonElem) {
-        const projects = groupOfButton.get(buttonElem)
-        for (const project of projects) {
-            project.classList.remove('project_blurred')
-        }
-    }
-    function focusOtherGroupsThan(buttonElem) {
-        serviceButtons.forEach(button => {
-            if (button != buttonElem) focusGroup(button)
+            if (button != buttonElem) switchGroup(button)
         })
     }
 }
-
-
-
-// classes: 'project_blurred', 'button-services_selected'
-
-
