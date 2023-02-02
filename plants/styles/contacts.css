@@ -2,11 +2,6 @@
     min-height: 550px;
     padding-top: 60px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 37px;
-
     background: 
         var(--bg-color) 
         no-repeat 
@@ -16,14 +11,22 @@
 }
 
 .contacts .section-header {
+    margin-bottom: 37px;
+
+    text-align: center;
     font: 40px/52px Inika, serif;
     font-weight: bold;
 }
 
+.city-select-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .city-select {
     height: 50px;
-    width: 450px;
-    align-self: flex-end;
+    max-width: 450px;
+    flex-grow: 1;
 
     display: flex;
     justify-content: space-between;
@@ -45,14 +48,17 @@
     .section.contacts {
         min-height: 739px;
         padding-top: 40px;
-        row-gap: 99px;
 
         background-position: left 294px bottom 0;
         background-size: 200px;
     }
 
-    .city-select {
-        align-self: auto;
+    .contacts .section-header {
+        margin-bottom: 99px;
+    }
+
+    .city-select-container {
+        justify-content: center;
     }
 }
 
@@ -61,19 +67,20 @@
     .section.contacts {
         min-height: 445px;
         padding-top: 25px;
-        row-gap: 81px;
 
         background-position-x: center;
         background-size: 100px;
     }
 
     .contacts .section-header {
+        margin-bottom: 81px;
+
         font-size: 25px;
         line-height: 32.57px;
     }
-
+    
     .city-select {
-        width: 300px;
+        max-width: 300px;
         padding-right: 22px;
     }
 }

@@ -37,21 +37,26 @@
     font: 20px Inika, serif;
     color: var(--orange-color);
 
-    transition: background-color 0.4s, color 0.5s;
+    transition: 
+        background-color 0.5s, 
+        color 0.5s,
+        box-shadow 0.6s
+    ;
 }
 
-.service .button:hover,
-.prices .button:hover {
+/* simple hover */
+.prices .button:hover,
+/* selected state */
+.button-services_gardens.button-services_selected,
+.button-services_lawn.button-services_selected,
+.button-services_planting.button-services_selected {
     background: var(--orange-color);
     color: var(--white-color);
     cursor: pointer;
 }
 
-.service .button:active,
-.prices .button:active {
-    transition: none;
-    background: var(--green-text-color);
-    cursor: pointer;
+.service .button:hover {
+    box-shadow: 0px 0px 10px 8px rgb(238, 211, 129);
 }
 
 .projects {
@@ -64,6 +69,10 @@
 
 .project{
     width: min-content;
+    transition: filter 0.5s;
+}
+.project.project_blurred {
+    filter: blur(2px);
 }
 
 .project img {
@@ -157,3 +166,8 @@
         row-gap: 34px;
     }
 }
+
+
+/* SERVICES FOCUS */
+
+ 

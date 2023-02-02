@@ -1,10 +1,9 @@
 const nav = document.querySelector('.nav');
 const darkBackground = document.querySelector('.darkBackground');
 
-const openMenu = () => {
-    nav.style.width = '200px';
-    darkBackground.style.visibility = 'visible';
-    darkBackground.style['background-color'] = 'rgba(0, 0, 0, 0.8)';
+const openMenu = function() {
+    nav.classList.add('nav_opened');
+    darkBackground.classList.add('darkBackground_applied');
 
     const navLinks = document.querySelectorAll('.nav-link');
     for (link of navLinks) {
@@ -12,8 +11,7 @@ const openMenu = () => {
     }
 }
 
-const closeMenu = () => {
-    nav.style.width = '0px';
-    darkBackground.style.visibility = 'hidden';
-    darkBackground.style['background-color'] = 'rgba(0, 0, 0, 0)';
+const closeMenu = function() {
+    nav.classList.remove('nav_opened');
+    darkBackground.classList.remove('darkBackground_applied');
 }
