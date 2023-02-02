@@ -1,5 +1,6 @@
 .section.prices {
     padding-top: 38px;
+    padding-bottom: 20px;
     min-height: 558px;
 
     display: flex;
@@ -59,17 +60,76 @@
     border-radius: 20px;
 }
 
-.prices .accordion .price-variant {
+.price-variant {
     padding: 0 40px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     border-radius: 20px;
     background: var(--bg-color);
+}
+
+.price-label {
+    min-height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font: bold 20px/20px Inter, sans-serif;
 }
+
+.price-details {
+    padding-top: 6px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.price-details::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 90%;
+    border-top: 1px solid #AEA1A1;
+}
+
+.price-details__text {
+    margin-bottom: 6px;
+    font: 300 10px/10px Inter, sans-serif;
+    color: var(--lightgrey-text-color);
+}
+
+.price-variant__price {
+    font: 400 12px/20px Inter, sans-serif;
+}
+
+.price-variant__price .currency {
+    font: 700 12px/20px Inter, sans-serif;
+}
+
+.price-variant__price .price-amount {
+    font: 700 16px/20px Inter, sans-serif;
+}
+
+.price-details .order-button {
+    margin-top: 12px;
+
+    width: 86px;
+    height: 25px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.price-details .order-button a {
+    font: 700 14px/20px Inter, sans-serif;
+    color: var(--lightgrey-text-color);
+    text-decoration: none;
+}
+
 
 .accordion-button {
     width: 16px;
@@ -132,21 +192,20 @@
         display: none;
     }
 
-
-    .prices .accordion .price-variant {
-        font-size: 15px;
-    }
-
     .prices .accordion {
         width: 224px;
         padding: 28px 21px;
         row-gap: 13.92px;
         margin-left: 2px;
     }
-
-    .prices .accordion .price-variant {
+    
+    .price-variant {
         padding-left: 30px;
         padding-right: 40px;
+    }
+    
+    .price-label {
+        font-size: 15px;
     }
 
     .accordion-button {
