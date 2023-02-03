@@ -9,23 +9,17 @@ for (const priceVariant of priceVariants) {
 let openedPriceVariant;
 
 function switchPriceVariant(priceVariant) {
+    const openedClass = 'price-variant_opened';
     // switch this variant
-    switchClass(priceVariant);
+    switchClass(priceVariant, openedClass);
 
     // if it has closed, no one is opened
     if (openedPriceVariant == priceVariant) openedPriceVariant = null;
     // if it has opened
     else {
         // switch another variant if it has been opened before
-        if (openedPriceVariant) switchClass(openedPriceVariant);
+        if (openedPriceVariant) switchClass(openedPriceVariant, openedClass);
         // now this variant is opened
         openedPriceVariant = priceVariant;
-    }
-
-    function switchClass(priceVariant) {
-        const turnedOnClass = 'price-variant_opened'
-        if (priceVariant.classList.contains(turnedOnClass))
-            priceVariant.classList.remove(turnedOnClass);
-        else priceVariant.classList.add(turnedOnClass);
     }
 }
