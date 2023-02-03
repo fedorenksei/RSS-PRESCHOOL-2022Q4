@@ -1,4 +1,4 @@
-const select = document.querySelector('.city-select');
+const select = document.querySelector('.selected-city-container');
 const options = select.querySelectorAll('.select-option');
 const selectedCity = select.querySelector('.selected-city')
 
@@ -17,14 +17,12 @@ for (const option of options) {
 
 function openOrCloseSelect() {
     switchClass(select, 'city-select_opened');
-    switchClass(
-        select.querySelector('.select-options'), 
-        'select-options_opened'
-    );
 }
 
 function selectOption(option) {
     const city = option.innerText;
     selectedCity.innerText = city;
-    select.classList.add('city-select_selected')
+    select.classList.add('city-select_selected');
+
+
 }
