@@ -8,13 +8,8 @@ serviceButtons.forEach(buttonElem => {
 
 let pressedServiceButtons = [];
 function switchServiceButton(buttonElem) {
-    switchButtonClass(buttonElem)
-    function switchButtonClass(buttonElem) {
-        const turnedOnClass = 'button-services_selected'
-        if (buttonElem.classList.contains(turnedOnClass))
-            buttonElem.classList.remove(turnedOnClass);
-        else buttonElem.classList.add(turnedOnClass);
-    }
+    const selectedButtonClass = 'button-services_selected'
+    switchClass(buttonElem, selectedButtonClass)
 
     if (pressedServiceButtons.indexOf(buttonElem) === -1) {
         turnOnButton(buttonElem);
@@ -38,7 +33,7 @@ function switchServiceButton(buttonElem) {
         if (pressedServiceButtons.length === 3) {
             const excessiveButton = pressedServiceButtons[0]
             turnOffButton(excessiveButton)
-            switchButtonClass(excessiveButton)
+            switchClass(excessiveButton, selectedButtonClass)
         }
     }
     
@@ -63,11 +58,8 @@ function switchServiceButton(buttonElem) {
         groupOfButton.set(buttonPlanting, document.querySelectorAll('.project-type_planting'))
         const projects = groupOfButton.get(buttonElem)
         
-        const blurClass = 'project_blurred';
         for (const project of projects) {
-            if (project.classList.contains(blurClass))
-                project.classList.remove(blurClass);
-            else project.classList.add(blurClass);
+            switchClass(project, 'project_blurred')
         }
     }
     function switchOtherGroupsThan(buttonElem) {
