@@ -89,19 +89,15 @@
     position: relative;
     height: 0;
     overflow: hidden;
-    visibility: hidden;
-    transform: translateY(-100%);
-    transition:
-        padding var(--transition-time),
-        height var(--transition-time),
-        overflow var(--transition-time)
-    ;
+    transition: height var(--transition-time);
 }
 
 .price-details::before {
     content: "";
     display: block;
     height: 6px;
+    width: 90%;
+    border-top: 1px solid #AEA1A1;
 }
 
 .price-details::after {
@@ -110,27 +106,11 @@
     height: 12px;
 }
 
-/* ACCORDION OPENED STYLE */
+/* ACCORDION OPENED */
 .price-variant.price-variant_opened .price-details {
-    visibility: visible;
-    transform: translateY(0);
     height: 104px;
-    transition: 
-        padding var(--transition-time),
-        height var(--transition-time),
-        overflow var(--transition-time),
-        visibility var(--transition-time);
 }
 
-.price-details::before {
-    content: "";
-    /* position: absolute; */
-    display: block;
-    /* top: 0;
-    left: 0; */
-    width: 90%;
-    border-top: 1px solid #AEA1A1;
-}
 
 .price-details__text {
     margin-bottom: 6px;
