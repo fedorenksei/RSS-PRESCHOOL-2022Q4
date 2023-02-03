@@ -24,11 +24,14 @@
 }
 
 .city-select {
-    position: relative;
-    height: 50px;
     max-width: 450px;
     flex-grow: 1;
+}
 
+.selected-city-container {
+    position: relative;
+    height: 50px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +39,7 @@
 
     background: #D6E7D2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    
     transition: var(--transition-time);
 }
 
@@ -70,7 +73,7 @@
     row-gap: 12px;
 }
 
-.city-select .select-options_opened {
+.city-select_opened .select-options {
     height: 234px;
 }
 
@@ -129,6 +132,28 @@
     transform: rotate(180deg);
 }
 
+.city-info {
+    margin-top: 47px;
+
+    padding: 35px;
+    
+    background-color: var(--bg-color);
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.city-parameters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.city-parameter {
+    font: 400 16px Inter, sans-serif;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
 /* tablet (768px) */
 @media (max-width: 1439px) {
     .section.contacts {
@@ -146,6 +171,10 @@
     .city-select-container {
         justify-content: center;
     }
+
+    .city-info {
+        margin-top: 61px;
+    }
 }
 
 /* mobile (380px) */
@@ -153,14 +182,14 @@
     .section.contacts {
         min-height: 445px;
         padding-top: 25px;
-
+        
         background-position-x: center;
         background-size: 100px;
     }
-
+    
     .contacts .section-header {
         margin-bottom: 81px;
-
+        
         font-size: 25px;
         line-height: 32.57px;
     }
@@ -169,8 +198,12 @@
         max-width: 300px;
         padding: 0 20px;
     }
-
+    
     .city-select .select-options {
         padding: 0 20px;
+    }
+
+    .city-info {
+        margin-top: 49px;
     }
 }
