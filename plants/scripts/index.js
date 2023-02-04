@@ -1,1 +1,1 @@
-console.log(`Score: 85/85`)
+console.log(`Score: 125/125`)

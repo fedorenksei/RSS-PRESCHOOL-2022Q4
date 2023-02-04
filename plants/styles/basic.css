@@ -9,6 +9,8 @@ html {
     --orange-color: #E06733;
     --white-color: #FFFFFF;
     --projects-border: #E3E1D5;
+
+    --transition-time: 0.3s;
 }
 
 @font-face {

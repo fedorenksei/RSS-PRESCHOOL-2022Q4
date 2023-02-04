@@ -47,6 +47,7 @@
     background: none;
 
     font: 16px Inter, sans-serif;
+    color: black;
 
     transition: background-color 0.5s, color 0.5s;
 }

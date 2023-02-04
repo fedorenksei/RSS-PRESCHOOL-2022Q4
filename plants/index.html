@@ -105,13 +105,19 @@
                     Service and our <br> projects
                 </h2>
                 <div class="buttons">
-                    <button class="button">Gardens</button>
-                    <button class="button">Lawn</button>
-                    <button class="button">Planting</button>
+                    <button class="button button-services_gardens">
+                        Gardens
+                    </button>
+                    <button class="button button-services_lawn">
+                        Lawn
+                    </button>
+                    <button class="button button-services_planting">
+                        Planting
+                    </button>
                 </div>
             </div>
             <div class="projects">
-                <figure class="project">
+                <figure class="project project-type_gardens">
                     <picture>
                         <source 
                             srcset="assets/img/projects-tablet/project1.png" 
@@ -128,7 +134,7 @@
                         </p>
                     </figcaption>
                 </figure>
-                <figure class="project">
+                <figure class="project project-type_planting">
                     <picture>
                         <source 
                             srcset="assets/img/projects-tablet/project2.png" 
@@ -145,7 +151,7 @@
                         </p>
                     </figcaption>
                 </figure>
-                <figure class="project">
+                <figure class="project project-type_lawn">
                     <picture>
                         <source 
                             srcset="assets/img/projects-tablet/project3.png" 
@@ -162,7 +168,7 @@
                         </p>
                     </figcaption>
                 </figure>
-                <figure class="project">
+                <figure class="project project-type_planting">
                     <picture>
                         <source 
                             srcset="assets/img/projects-tablet/project4.png" 
@@ -179,7 +185,7 @@
                         </p>
                     </figcaption>
                 </figure>
-                <figure class="project">
+                <figure class="project project-type_gardens">
                     <picture>
                         <source 
                             srcset="assets/img/projects-tablet/project5.png" 
@@ -196,7 +202,7 @@
                         </p>
                     </figcaption>
                 </figure>
-                <figure class="project">
+                <figure class="project project-type_planting">
                     <picture>
                         <source 
                             srcset="assets/img/projects-tablet/project6.png" 
@@ -220,21 +226,69 @@
                 <h2 class="section-header">Prices</h2>
                 <div class="accordion">
                     <div class="price-variant">
-                        <p>Basics</p>
-                        <div class="accordion-button">
-                            <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                        <div class="price-label">
+                            <p>Basics</p>
+                            <div class="accordion-button">
+                                <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="price-details">
+                            <p class="price-details__text">
+                                Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            </p>
+                            <p class="price-variant__price">
+                                <span class="currency orange-text">$</span>
+                                <span class="price-amount orange-text">15</span> / per hour
+                            </p>
+                            <a class="order-button-link" href="#contacts">
+                                <div class="order-button">
+                                    Order
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="price-variant">
-                        <p>Standard</p>
-                        <div class="accordion-button">
-                            <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                        <div class="price-label">
+                            <p>Standard</p>
+                            <div class="accordion-button">
+                                <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="price-details">
+                            <p class="price-details__text">
+                                Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            </p>
+                            <p class="price-variant__price">
+                                <span class="currency orange-text">$</span>
+                                <span class="price-amount orange-text">25</span> / per hour
+                            </p>
+                            <a class="order-button-link" href="#contacts">
+                                <div class="order-button">
+                                    Order
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="price-variant">
-                        <p>Pro care</p>
-                        <div class="accordion-button">
-                            <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                        <div class="price-label">
+                            <p>Pro care</p>
+                            <div class="accordion-button">
+                                <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="price-details">
+                            <p class="price-details__text">
+                                Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            </p>
+                            <p class="price-variant__price">
+                                <span class="currency orange-text">$</span>
+                                <span class="price-amount orange-text">35</span> / per hour
+                            </p>
+                            <a class="order-button-link" href="#contacts">
+                                <div class="order-button">
+                                    Order
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -255,10 +309,43 @@
         </section>
         <section class="section contacts" id="contacts">
             <h2 class="section-header green-text">Contact us</h2>
-            <div class="city-select">
-                <p class="city-option">City</p>
-                <div class="accordion-button">
-                    <img class="arrow" src="assets/svg/arrow.svg" alt="">
+            <div class="city-select-container">
+                <div class="city-select">
+                    <div class="selected-city-container">
+                        <p class="selected-city">City</p>
+                        <div class="accordion-button">
+                            <img class="arrow" src="assets/svg/arrow.svg" alt="">
+                        </div>
+                        <div class="select-options">
+                            <div class="select-options-container">
+                                <div class="select-option">
+                                    Canandaigua, NY
+                                </div>
+                                <div class="select-option">
+                                    New York City
+                                </div>
+                                <div class="select-option">
+                                    Yonkers, NY
+                                </div>
+                                <div class="select-option">
+                                    Sherrill, NY
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-info">
+                        <div class="city-parameters">
+                            <div class="city-parameter-name">City:</div>
+                            <div class="city-parameter-value" name="city"></div>
+
+                            <div class="city-parameter-name">Phone:</div>
+                            <div class="city-parameter-value" name="phone"></div>
+
+                            <div class="city-parameter-name">Office address:</div>
+                            <div class="city-parameter-value" name="address"></div>
+                        </div>
+                        <a href="tel:" class="call-us-button">Call us</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -302,5 +389,8 @@
         </ul>
     </footer>
     <script src="scripts/burger.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/accordion.js"></script>
+    <script src="scripts/select.js"></script>
 </body>
 </html>
