@@ -9,7 +9,7 @@ serviceButtons.forEach(buttonElem => {
 let pressedServiceButtons = [];
 function switchServiceButton(buttonElem) {
     const selectedButtonClass = 'button-services_selected'
-    switchClass(buttonElem, selectedButtonClass)
+    buttonElem.classList.toggle(selectedButtonClass)
 
     if (pressedServiceButtons.indexOf(buttonElem) === -1) {
         turnOnButton(buttonElem);
@@ -33,7 +33,7 @@ function switchServiceButton(buttonElem) {
         if (pressedServiceButtons.length === 3) {
             const excessiveButton = pressedServiceButtons[0]
             turnOffButton(excessiveButton)
-            switchClass(excessiveButton, selectedButtonClass)
+            excessiveButton.classList.toggle(selectedButtonClass)
         }
     }
     
@@ -59,7 +59,7 @@ function switchServiceButton(buttonElem) {
         const projects = groupOfButton.get(buttonElem)
         
         for (const project of projects) {
-            switchClass(project, 'project_blurred')
+            project.classList.toggle('project_blurred')
         }
     }
     function switchOtherGroupsThan(buttonElem) {
