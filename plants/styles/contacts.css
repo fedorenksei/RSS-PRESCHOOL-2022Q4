@@ -30,7 +30,7 @@
 
 .selected-city-container {
     position: relative;
-    height: 50px;
+    min-height: 50px;
     
     display: flex;
     justify-content: space-between;
@@ -90,7 +90,7 @@
 }
 
 .city-select .select-options .select-option {
-    height: 35px;
+    min-height: 35px;
     
     display: flex;
     align-items: center;
@@ -133,25 +133,57 @@
 }
 
 .city-info {
+    visibility: hidden;
     margin-top: 47px;
 
     padding: 35px;
+    padding-bottom: 32px;
     
     background-color: var(--bg-color);
     border: 1px solid #000000;
     border-radius: 20px;
 }
 
-.city-parameters {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+.city-info_visible {
+    visibility: visible;
 }
 
-.city-parameter {
+.city-parameters {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 20px;
+    column-gap: 15px;
+
     font: 400 16px Inter, sans-serif;
     letter-spacing: 0.05em;
     color: #000000;
+}
+
+.city-parameter-value {
+    color: var(--lightgrey-text-color)
+}
+
+.call-us-button {
+    margin: 25px auto 0 auto;
+    width: 122px;
+    height: 26px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--orange-color);
+    border-radius: 5px;
+
+    font: 700 10px Inika, serif;
+    text-decoration: none;
+    color: var(--lightgrey-text-color);
+    transition: 0.4s;
+}
+
+.call-us-button:hover {
+    background-color: var(--orange-color);
+    color: white;
 }
 
 /* tablet (768px) */
@@ -185,6 +217,10 @@
         
         background-position-x: center;
         background-size: 100px;
+    }
+
+    .section.contacts.section-contacts_remove-background-picture {
+        background: var(--bg-color) 
     }
     
     .contacts .section-header {
