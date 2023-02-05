@@ -60,10 +60,9 @@
 }
 
 .projects {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     justify-content: space-between;
-    column-gap: 40px;
     row-gap: 55px;
 }
 
@@ -129,6 +128,12 @@
     }
 }
 
+@media (max-width: 1070px) {
+    .projects {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
 /* mobile (>=380) */
 @media (max-width: 767px) {
     .section.service {
@@ -161,13 +166,8 @@
     }
 
     .projects {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: auto;
+        justify-content: center;
         row-gap: 34px;
     }
 }
-
-
-/* SERVICES FOCUS */
-
- 
