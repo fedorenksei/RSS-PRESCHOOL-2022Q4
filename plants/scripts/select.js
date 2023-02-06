@@ -55,7 +55,7 @@ function selectOption(option) {
     })
     document.querySelector('.city-info').classList.add('city-info_visible')
     document.querySelector('.city-info .call-us-button')
-        .setAttribute('href', 'tel:' + cityData[city].phone)
+        .setAttribute('href', 'tel:' + cityData[city].phone.replace(/ /g, ''))
     ;
 
     // for mobile
