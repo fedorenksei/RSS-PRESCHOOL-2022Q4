@@ -1,0 +1,156 @@
+/* SECTION FLEXBOX */
+
+.section.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: var(--bg-color);
+}
+
+.welcome .content {
+    order: 1;
+}
+
+/* tablet (>=768px) */
+@media (max-width: 1439px) {
+    .welcome .leafs {
+        order: 1;
+    }
+
+    .section.welcome {
+        align-items: flex-start;
+    }
+}
+
+/* mobile (380px) */
+@media (max-width: 767px) {
+    .welcome .leafs {
+        display: none;
+    }
+
+    .section.welcome {
+        justify-content: center;
+    }
+}
+
+
+/* BUTTON INTERACTIVITY */
+
+.welcome .button {
+    width: 158px;
+    height: 44px;
+
+    border: 2px solid var(--orange-color);
+    border-radius: 10px;
+    
+    background: none;
+
+    font: 16px Inter, sans-serif;
+    color: black;
+
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.welcome .button:hover {
+    background: var(--orange-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.welcome .button:active {
+    transition: none;
+    background: var(--green-text-color);
+    cursor: pointer;
+}
+
+
+/* ELEMENTS SIZING */
+
+/* desktop (>=1440px) */
+.section.welcome {
+    min-height: 532px;
+}
+
+.welcome .leafs {
+    width: 448.8px;
+}
+
+.welcome .content {
+    max-width: 549px;
+}
+
+.main-header {
+    margin-top: 5px;
+    margin-bottom: 41px;
+
+    font: bold 45px/50px Inter;
+    color: var(--lightgrey-text-color);
+}
+
+.welcome .text {
+    font: 20px/35px Inter, sans-serif;
+    margin-bottom: 48px;
+}
+
+/* tablet (768px) */
+@media (max-width: 1439px) {
+    .section.welcome {
+        padding-top: 40px;
+        min-height: 420px;
+    }
+
+    .welcome .leafs {
+        width: 280px;
+    }
+
+    .welcome .content {
+        max-width: 346px;
+    }
+
+    .main-header {
+        margin-top: 0px;
+        margin-bottom: 30px;
+
+        font-size: 35px;
+    }
+
+    .welcome .text {
+        font-size: 16px;
+        line-height: 25px;
+        
+        margin-bottom: 35px;
+        margin-left: 5px;
+    }
+}
+
+/* mobile (>=380) */
+@media (max-width: 767px) {
+    .section.welcome {
+        padding-top: 26px;
+        min-height: 300px;
+    }
+
+    .welcome .content {
+        max-width: unset;
+    }
+
+    .main-header {
+        margin-bottom: 21px;
+
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .welcome .text {
+        margin-bottom: 25px;
+        margin-left: 0px;
+    }
+
+    .welcome .button {
+        width: 100px;
+        height: 34.14px;
+
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,106 @@
+/* VARIABLES AND FONT IMPORTS*/
+
+html {
+    --bg-color: #EDF2EC;
+    --dark-text-color: #010201;
+    --grey-text-color: #636060;
+    --lightgrey-text-color: #717171;
+    --green-text-color: #499A18;
+    --orange-color: #E06733;
+    --white-color: #FFFFFF;
+    --projects-border: #E3E1D5;
+
+    --transition-time: 0.3s;
+}
+
+@font-face {
+    font-family: 'Inika';
+    src: url("../assets/fonts/Inika/Inika-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inika';
+    src: url("../assets/fonts/Inika/Inika-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("../assets/fonts/Inter/static/Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+
+/* LEFT AND RIGHT PADDINGS OF WHOLE PAGE */
+
+html {
+    --general-padding: calc((100vw - 1222px) / 2);
+}
+
+/* desktop (1440px) */
+@media (max-width: 1440px) {
+    html {
+        /* --general-padding: calc((100vw - 1222px) / 2); */
+        --general-padding: 7.548476454293629vw;
+    }
+}
+
+/* tablet (768px) */
+@media (max-width: 768px) {
+    html {
+        /* --general-padding: calc((100vw - 668px) / 2); */
+        --general-padding: 6.510416666666667vw;
+    }
+}
+
+/* mobile (380px) */
+@media (max-width: 380px) {
+    html {
+        /* --general-padding: calc((100vw - 330px) / 2); */
+        --general-padding: 6.578947368421052vw;
+    }
+}
+
+
+/* PAGE LAYOUT */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+main > *,
+header,
+footer {
+    padding: 0 var(--general-padding) 0 var(--general-padding);
+}
+
+
+/* TEXT COLOR */
+
+.text {
+    color: var(--grey-text-color);
+}
+
+.green-text {
+    color: var(--green-text-color);
+}
+
+.orange-text {
+    color: var(--orange-color);
+}

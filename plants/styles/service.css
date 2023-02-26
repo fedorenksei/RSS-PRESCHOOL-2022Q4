@@ -1,0 +1,173 @@
+.section.service {
+    padding-top: 45px;
+    padding-bottom: 121px;
+    background-color: #EDF2EC;
+}
+
+.service .header-wrapper {
+    min-height: 94px;
+    margin-bottom: 77px;
+    display: flex;
+    align-items: center;
+    column-gap: 158.5px;
+    flex-wrap: wrap;
+}
+
+.service .section-header {
+    font: 40px/52.12px Inika, serif;
+}
+
+.service .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 38px;
+    row-gap: 9px;
+    margin-top: 4px;
+}
+
+.service .button,
+.prices .button {
+    width: 161px;
+    height: 50px;
+    border: 1px solid var(--orange-color);
+    border-radius: 5px;
+    
+    background: none;
+
+    font: 20px Inika, serif;
+    color: var(--orange-color);
+
+    transition: 
+        background-color 0.5s, 
+        color 0.5s,
+        box-shadow 0.6s
+    ;
+}
+
+/* simple hover */
+.prices .button:hover,
+/* selected state */
+.button-services_gardens.button-services_selected,
+.button-services_lawn.button-services_selected,
+.button-services_planting.button-services_selected {
+    background: var(--orange-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.service .button:hover {
+    box-shadow: 0px 0px 10px 8px rgb(238, 211, 129);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    row-gap: 55px;
+}
+
+.project{
+    width: min-content;
+    transition: filter 0.5s;
+}
+.project.project_blurred {
+    filter: blur(2px);
+}
+
+.project img {
+    border-radius: 20px 20px 0px 0px;
+    display: block;
+}
+
+.project-caption {
+    border: 1px solid var(--projects-border);
+    border-radius: 0px 0px 20px 20px;
+    height: 100px;
+}
+
+.project-name {
+    font: bold 20px/20px Inter, sans-serif;
+    margin: 10px;
+}
+
+.project-description {
+    font: 16px/20px Inter, sans-serif;
+    color: var(--lightgrey-text-color);
+}
+
+.project-name,
+.project-description {
+    text-align: center;
+}
+
+
+/* tablet (>=768px) */
+@media (max-width: 1439px) {
+    .section.service {
+        padding-top: 59px;
+        padding-bottom: 70px;
+    }
+    
+    .service .header-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .service .section-header {
+        margin-bottom: 40px;
+
+        font-size: 35px;
+        line-height: 45.61px;
+    }
+
+    .projects {
+        row-gap: 38px;
+    }
+
+    .project-description {
+        padding: 0px 35px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .projects {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+/* mobile (>=380) */
+@media (max-width: 767px) {
+    .section.service {
+        padding-top: 30px;
+        padding-bottom: 27px;
+    }
+
+    .service .header-wrapper {
+        margin-bottom: 40px;
+    }
+    
+    .service .section-header {
+        margin-bottom: 35px;
+
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+
+    .service .buttons {
+        column-gap: 10px;
+    }
+
+    .service .button,
+    .prices .button {
+        width: 121px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .projects {
+        grid-template-columns: auto;
+        justify-content: center;
+        row-gap: 34px;
+    }
+}
