@@ -7,4 +7,5 @@ About me:
 - _My CV:_ https://fedorenksei.github.io/rsschool-cv/
 
 Tasks done in this repo:
-1. Plants#1
+1. Plants: https://rolling-scopes-school.github.io/fedorenksei-JSFEPRESCHOOL2022Q4/plants/
+
